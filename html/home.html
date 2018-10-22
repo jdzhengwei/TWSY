@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>天魏山云</title>
     <link href="../css/home.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../static/jquery-3.3.1.js"></script>
 </head>
 <body>
     <div class="top-area">
@@ -12,29 +13,41 @@
     <div class="nav-area">
         <div class="nav">
             <ul class="nav-ul">
-                <li>
-                    <a href="/">首页</a>
-                </li>
-                <li>
-                    <a href="/">关于我们</a>
-                </li>
-                <li>
-                    <a href="/">产品介绍</a>
-                </li>
-                <li>
-                    <a href="/">解决方案</a>
-                </li>
-                <li>
-                    <a href="/">成功案例</a>
-                </li>
-                <li>
-                    <a href="/">技术支持</a>
-                </li>
+                <li>首页</li>
+                <li>关于我们</li>
+                <li>产品介绍</li>
+                <li>解决方案 </li>
+                <li>成功案例 </li>
+                <li>技术支持</li>
             </ul>
         </div>
     </div>
-    <div class="home-img-area">
-        <img src="../assets/home.png"/>
+    <div id="content">
+        <div class="home">
+            <div class="home-img-area">
+                <img src="../assets/home.png"/>
+            </div>
+        </div>
+        <div class="about">
+            <div class="home-img-area">
+                <img src="../assets/about_1.png"/>
+            </div>
+        </div>
     </div>
+
+
+    <script>
+        $('.nav-ul li').click(function(){
+            var idx = $(this).index();
+            var childCount = $('.nav-ul').children().length;
+            for(var i = 0; i < childCount; i++ ){
+                if (i === idx) {
+                    $($('#content').children('div').get(i)).css('display', 'block');
+                } else {
+                    $($('#content').children('div').get(i)).css('display', 'none');
+                }
+            }
+        });
+    </script>
 </body>
 </html>

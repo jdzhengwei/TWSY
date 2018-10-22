@@ -9,7 +9,7 @@ body{
 }
 
 .top-area img{
-  margin-left: 350px;
+  margin-left: 250px;
   width: 227px;
   height: 84px;
 }
@@ -36,16 +36,25 @@ body{
 
 .nav-ul li{
   float: left;
-  display: inline;
-}
-
-.nav-ul li a{
   display: block;
   width: 120px;
   font-size: 14px;
   color: white;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-ul li:hover{
+  background-color: #dc9d1a;
+}
+
+.home{
+  display: block;
+}
+
+.about{
+  display: none;
 }
 
 .home-img-area{

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>天魏山云</title>
     <link href="../css/home.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/banner.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../static/jquery-3.3.1.js"></script>
 </head>
 <body>
@@ -24,8 +25,31 @@
     </div>
     <div id="content">
         <div class="home">
-            <div class="home-img-area">
-                <img src="../assets/home.png"/>
+            <!--<div class="home-img-area">-->
+                <!--<img src="../assets/home.png"/>-->
+            <!--</div>-->
+            <div class="slideBox">
+                <ul>
+                    <li><img src="../assets/home.png" alt="" width="600px" height="400px"/></li>
+                    <li><img src="../assets/about_2.png" alt="" width="600px" height="400px"/></li>
+                    <li><img src="../assets/about_3.png" alt="" width="600px" height="400px"/></li>
+                </ul>
+                <div class="spanBox">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+                <div class="prev"><img src="image/left_arrow.jpg" width="15" height="50" alt=""/></div>
+                <div class="next"><img src="image/right_arrow.jpg" width="15" height="50" alt=""/></div>
+            </div>
+            <hr class="hr"/>
+            <div class="teamwork-title">
+                解决方案
+            </div>
+            <div class="busi-area">
+                <img src="../assets/呼叫中心.png"/>
+                <img style="margin-left: 50px" src="../assets/智能客服.png"/>
+                <img style="margin-left: 50px" src="../assets/智能语音.png"/>
             </div>
             <hr class="hr"/>
             <div class="teamwork-title">
@@ -53,6 +77,22 @@
             <div class="home-img-area">
                 <img src="../assets/about_1.png"/>
             </div>
+            <p class="us-respect">
+                信任、专注、创新、分享<br/>
+                “信任”是天魏山云的“企业根基”：<br/>
+                我们不仅在公司内部倡导相互信任的文化氛围，更注重于客户建立相互信赖的合作伙伴关系<br/>
+                “专注”是天魏山云的“企业精神”：<br/>
+                我们专注于最前沿技术的研究与开发，聚焦目标，高效执行<br/>
+                “创新”是天魏山云的“企业基因”：<br/>
+                我们致力于积极寻找各种可能性，不断进行技术和产品的创新，挑战不可能，攀越新高峰<br/>
+                “分享”是天魏山云的“企业核心”：<br/>
+                我们的理念是与客户分享经验，共赢成功；<br/>
+                在公司内部积极营造乐于分享知识、经验、快乐，互相帮助，共同发展，一起成功的文化氛围<br/>
+                <br/>
+                我们的愿景：成为世界领先的IT信息化产品供应商和平台运营商<br/>
+                我们的使命：打造更多人工智能应用，让人工智能更大范围的造福人类<br/>
+                我们的文化：诚信正直、积极主动、海纳百川、团队协作、追求优秀
+            </p>
         </div>
     </div>
 
@@ -80,6 +120,58 @@
     </div>
 
     <script>
+        $(document).ready(function(){
+            var slideBox = $(".slideBox");
+            var ul = slideBox.find("ul");
+            var oneWidth = slideBox.find("ul li").eq(0).width();
+            var number = slideBox.find(".spanBox span");            //注意分号 和逗号的用法
+            var timer = null;
+            var sw = 0;
+            //每个span绑定click事件，完成切换颜色和动画，以及读取参数值
+            number.on("click",function (){
+                $(this).addClass("active").siblings("span").removeClass("active");
+                sw=$(this).index();
+                ul.animate({
+                    "right":oneWidth*sw,    //ul标签的动画为向左移动；
+                });
+            });
+            //左右按钮的控制效果
+            $(".next").stop(true,true).click(function (){
+                sw++;
+                if(sw==number.length){sw=0};
+                number.eq(sw).trigger("click");
+            });
+            $(".prev").stop(true,true).click(function (){
+                sw--;
+                if(sw==number.length){sw=0};
+                number.eq(sw).trigger("click");
+            });
+            //定时器的使用，自动开始
+            timer = setInterval(function (){
+                sw++;
+                if(sw==number.length){sw=0};
+                number.eq(sw).trigger("click");
+            },2000);
+            //hover事件完成悬停和，左右图标的动画效果
+            slideBox.hover(function(){
+                $(".next,.prev").animate({
+                    "opacity":1,
+                },200);
+                clearInterval(timer);
+            },function(){
+                $(".next,.prev").animate({
+                    "opacity":0.5,
+                },500);
+                timer = setInterval(function (){
+                    sw++;
+                    if(sw==number.length){sw=0};
+                    number.eq(sw).trigger("click");
+                },2000);
+            })
+
+        });
+
+
         $('.nav-ul li').click(function(){
             var idx = $(this).index();
             var childCount = $('.nav-ul').children().length;

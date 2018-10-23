@@ -72,14 +72,14 @@ body{
 }
 
 .teamwork-title{
-  margin-left: 250px;
+  margin-left: 200px;
   font-size: 20px;
   color: #dc7b2d;
 }
 
 .team-img{
-  width: 1500px;
-  margin: auto;
+  width: auto;
+  margin: 0 auto 20px;
   text-align: center;
 }
 
@@ -105,7 +105,9 @@ body{
 /*}*/
 
 .contact-area{
-  margin-left: 120px;
+  margin-left: 50px;
+  margin-top: 20px;
+  float: left;
 }
 
 .footer-area{
@@ -122,7 +124,7 @@ body{
 }
 
 #content{
-  height: 600px;
+  height: auto;
 }
 
 .footer-logo-area{
@@ -133,11 +135,12 @@ body{
   width: 200px;
   height: 80px;
   margin-left: 200px;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .footer-qrcode-area{
   float: right;
+  margin-right: 120px;
 }
 
 .footer-qrcode-area img{
@@ -145,4 +148,22 @@ body{
   height: 200px;
   margin-top: 20px;
   margin-right: 20px;
+}
+
+.us-respect{
+  width: 800px;
+  margin: 20px auto 30px auto;
+}
+
+.busi-area{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.busi-area img{
+  width: 300px;
+  height: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

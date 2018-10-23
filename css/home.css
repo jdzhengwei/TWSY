@@ -61,4 +61,88 @@ body{
   width: 100%;
   height: auto;
   text-align: center;
+  background-color: rgba(233, 236, 246, 0.87);
+}
+
+.hr{
+  width: 1400px;
+  background-color: red;
+  height: 1px;
+  border: none;
+}
+
+.teamwork-title{
+  margin-left: 250px;
+  font-size: 20px;
+  color: #dc7b2d;
+}
+
+.team-img{
+  width: 1500px;
+  margin: auto;
+  text-align: center;
+}
+
+.team-img img{
+  margin-left: 20px;
+}
+
+.team-img a{
+  text-decoration: none;
+}
+
+.company-info-area{
+  width: 100%;
+  height: 300px;
+  background: #2dc2ff;
+  color: white;
+  line-height: 30px;
+}
+
+/*.company-info-area div{*/
+  /*width: 300px;*/
+  /*margin: auto;*/
+/*}*/
+
+.contact-area{
+  margin-left: 120px;
+}
+
+.footer-area{
+  width: 100%;
+  height: 60px;
+  background: #2F2F2F;
+  color: white;
+  text-align: center;
+  clear: both;
+  line-height: 60px;
+  font-size: 12px;
+  position: relative;
+  bottom: 0;
+}
+
+#content{
+  height: 600px;
+}
+
+.footer-logo-area{
+  float: left;
+}
+
+.footer-logo-area img{
+  width: 200px;
+  height: 80px;
+  margin-left: 200px;
+  margin-top: 60px;
+}
+
+.footer-qrcode-area{
+  float: right;
+}
+
+.footer-qrcode-area img{
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-right: 20px;
 }

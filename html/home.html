@@ -13,7 +13,7 @@
     <div class="nav-area">
         <div class="nav">
             <ul class="nav-ul">
-                <li>首页</li>
+                <li style="background: #BBDC4B">首页</li>
                 <li>关于我们</li>
                 <li>产品介绍</li>
                 <li>解决方案 </li>
@@ -27,6 +27,27 @@
             <div class="home-img-area">
                 <img src="../assets/home.png"/>
             </div>
+            <hr class="hr"/>
+            <div class="teamwork-title">
+                合作伙伴
+            </div>
+            <div class="team-img">
+                <a href="http://www.udesk.cn" target="_blank">
+                    <img src="../assets/Udesk.png"/>
+                </a>
+                <a href="http://www.varyun.com/" target="_blank">
+                    <img src="../assets/伟氩云.png"/>
+                </a>
+                <a href="http://25108677.czvv.com/" target="_blank">
+                    <img src="../assets/南京优车讯网络科技有限公司.png"/>
+                </a>
+                <a href="http://www.uairobot.com/" target="_blank">
+                    <img src="../assets/合光机器人.png"/>
+                </a>
+                <a href="https://www.xiaoi.com" target="_blank">
+                    <img src="../assets/小i机器人.png"/>
+                </a>
+            </div>
         </div>
         <div class="about">
             <div class="home-img-area">
@@ -35,6 +56,28 @@
         </div>
     </div>
 
+    <div class="company-info-area">
+        <div class="footer-logo-area">
+            <img src="../assets/logo.jpg"/>
+        </div>
+        <div class="footer-qrcode-area">
+            <img src="../assets/qrcode.png"/>
+            <br>
+            <span>微信公众号:客户时代custime</span>
+        </div>
+        <div class="contact-area">
+            <div style="height: 40px;"></div>
+            <div>联系人：关经理</div>
+            <div>电话：15601220314</div>
+            <div>邮箱：shunxingshi@126.com</div>
+            <div>地址：北京市东城区天恒大厦607B</div>
+        </div>
+    </div>
+    <div class="footer-area">
+        <span class="footer-text">
+            版权所有 © 2006-2026 北京联信志诚信息技术有限公司     京ICP备09059868号-1     京公网安备11010802017701
+        </span>
+    </div>
 
     <script>
         $('.nav-ul li').click(function(){
@@ -43,8 +86,22 @@
             for(var i = 0; i < childCount; i++ ){
                 if (i === idx) {
                     $($('#content').children('div').get(i)).css('display', 'block');
+                    var ele = $($('.nav-ul').children().get(i));;
+                    ele.css('background', '#BBDC4B');
+                    ele.hover(function () {
+                        $(this).css('background', '#BBDC4B');
+                    }, function () {
+                        $(this).css("background","#BBDC4B");
+                    });
                 } else {
                     $($('#content').children('div').get(i)).css('display', 'none');
+                    var ele = $($('.nav-ul').children().get(i));
+                    ele.css('background', 'none');
+                    ele.hover(function () {
+                        $(this).css("background","#dc9d1a");
+                    }, function () {
+                        $(this).css("background","#dc7b2d");
+                    });
                 }
             }
         });

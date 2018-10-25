@@ -97,6 +97,7 @@ body{
   background: #2dc2ff;
   color: white;
   line-height: 30px;
+  clear: both;
 }
 
 /*.company-info-area div{*/
@@ -155,15 +156,49 @@ body{
   margin: 20px auto 30px auto;
 }
 
-.busi-area{
+.busi-item{
   width: 100%;
   height: auto;
   text-align: center;
+  cursor: pointer;
 }
 
-.busi-area img{
+.busi-item img{
   width: 300px;
   height: 300px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.product_area{
+  display: none;
+}
+
+.busi-area{
+  display: none;
+}
+
+#busi_2, #busi_3{
+  display: none;
+}
+
+.busi-desc{
+  width: 500px;
+  margin: auto;
+}
+
+.busi-select-area{
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
+.busi-select-area div{
+  line-height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: antiquewhite;
+  text-align: center;
 }

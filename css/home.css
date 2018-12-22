@@ -53,7 +53,7 @@ body{
   display: block;
 }
 
-.about{
+.about, .product{
   display: none;
 }
 
@@ -161,6 +161,24 @@ body{
   height: auto;
   text-align: center;
   cursor: pointer;
+  margin-left: 150px;
+}
+
+.busi-item div {
+  float: left;
+}
+
+.busi-item div img{
+  width: 300px;
+  height: 200px;
+}
+
+.busi-item div span{
+  margin-left: 0px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: block;
 }
 
 .busi-item img{
@@ -187,7 +205,7 @@ body{
   margin: auto;
 }
 
-.busi-select-area{
+.busi-select-area, .pro-select-area{
   float: left;
   width: 200px;
   height: 200px;
@@ -195,7 +213,7 @@ body{
   margin-left: 150px;
 }
 
-.busi-select-area div{
+.busi-select-area div, .pro-select-area div{
   line-height: 50px;
   font-size: 20px;
   cursor: pointer;

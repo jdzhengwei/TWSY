@@ -233,7 +233,7 @@ body{
 
 @media screen and (min-width: 1680px) {
   .teamwork-title{
-    margin-left: 400px;
+    margin-left: 420px;
     font-size: 20px;
     color: #dc7b2d;
   }
@@ -243,6 +243,6 @@ body{
     height: auto;
     text-align: center;
     cursor: pointer;
-    margin-left: 350px;
+    margin-left: 420px;
   }
 }

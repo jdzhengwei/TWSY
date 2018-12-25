@@ -201,7 +201,7 @@ body{
 }
 
 .busi-desc{
-  width: 500px;
+  width: 700px;
   margin: auto;
 }
 
@@ -219,4 +219,30 @@ body{
   cursor: pointer;
   background-color: antiquewhite;
   text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .busi-select-area, .pro-select-area{
+    float: left;
+    width: 175px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .teamwork-title{
+    margin-left: 400px;
+    font-size: 20px;
+    color: #dc7b2d;
+  }
+
+  .busi-item{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 350px;
+  }
 }

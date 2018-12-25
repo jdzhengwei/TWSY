@@ -221,7 +221,7 @@ body{
   text-align: center;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1680px) {
   .busi-select-area, .pro-select-area{
     float: left;
     width: 175px;
@@ -231,7 +231,7 @@ body{
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1680px) {
   .teamwork-title{
     margin-left: 400px;
     font-size: 20px;
